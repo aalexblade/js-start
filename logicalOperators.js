@@ -1,4 +1,4 @@
-// Запам'ятайте 6 хибних (falsy) значень, що приводяться до false 
+// Запам'ятайте 6 хибних (falsy) значень, що приводяться до false
 
 // 0
 // NaN
@@ -19,6 +19,7 @@
 // const age = 50;
 // console.log(age > 10 && age < 30); // true && false -> false
 // console.log(age > 80 && age < 120); // false && true -> false
+
 
 // Тобто, логічне «І» зупиняється на хибному і повертає те, на чому зупинилось, або останній операнд.
 
@@ -51,7 +52,7 @@
 // console.log(3 || true); // 3
 // console.log(true || 3); // true
 
-// Виконуючи логічне «АБО», правий операнд може не обчислюватися 
+// Виконуючи логічне «АБО», правий операнд може не обчислюватися
 // у випадку, якщо лівий був приведений до true.
 
 // =======================================================
@@ -67,6 +68,8 @@
 // console.log(!0); // !0 -> !false -> true
 // console.log(!""); // !"" -> !false -> true
 
-const isOnline = true;
-const isNotOnline = !isOnline;
-console.log(isNotOnline)
+// const isOnline = true;
+// const isNotOnline = !isOnline;
+// console.log(isNotOnline)
+
+// ============================================================
