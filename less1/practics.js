@@ -143,4 +143,7 @@
 //     message = "Sorry, there is no delivery to your country";
 // }
 
-// =============================
+// =============================length=====
+
+const courseTopic = "JavaScript essentials";
+console.log(courseTopic.slice(0, courseTopic.length))
