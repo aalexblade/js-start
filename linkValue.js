@@ -8,7 +8,7 @@
 
 // console.log(a)
 // console.log(b)
-// console.log(b === a)
+// console.log(b === a) //false
 
 // Object=====================
 
@@ -20,4 +20,4 @@ b.push(20)
 
 console.log('a', a)
 console.log('b', b)
-console.log(b === a)
+console.log(b === a) //true
