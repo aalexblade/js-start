@@ -16,12 +16,12 @@
 // const newDes = []
 
 // for (let i = 0; i < des.length; i += 1) {
-//     newDes.push(des[i])
+//     newDes.push(des)
 // }
 
 // console.log(newDes)
 
-// for of
+// for of=====
 // const des = ["covid", "ebola", "anthtrax"]
 
 // const newDes = []
@@ -36,9 +36,9 @@
 
 // const des = ["covid", "ebola", "anthtrax"]
 
-// for (let i = 0; i < des.length; i++) {
-//     console.log(des[i]);
-// }
+// // for (let i = 0; i < des.length; i++) {
+// //     console.log(des[i]);
+// // }
 
 // for (let item of des) {
 //     console.log(item)
@@ -50,10 +50,10 @@
 
 // for (let item of des) {
 //     if (item === "ebola") {
-//         console.log("Find")
+//         // console.log("Find")
 
 //         let idx = des.indexOf(item)
-//         console.log(idx)
+//         // console.log(idx)
 
 //         des[idx] = "african ebola"
 //     }
