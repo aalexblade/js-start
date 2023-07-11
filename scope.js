@@ -60,11 +60,11 @@
 // }
 
 
-function getSum(a, b) {
+// function getSum(a, b) {
 
-    return a + b
-    console.log(a + b)
-}
+//     return a + b
+//     console.log(a + b)
+// }
 
-console.log(getSum(10, 15))
-// getSum(29, 33)
+// console.log(getSum(10, 15))
+// // getSum(29, 33)
