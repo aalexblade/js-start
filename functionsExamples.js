@@ -44,18 +44,35 @@
 // console.log(updateData(des, "ebola", "american ebola"))
 
 // D - delete ===================================
-const des = ["covid", "ebola", "sick"]
+// const des = ["covid", "ebola", "sick"]
 
-function remuveDate(des, itemToRemuve) {
-    for (let item of des) {
-        if (item === itemToRemuve) {
+// function remuveDate(des, itemToRemuve) {
+//     for (let item of des) {
+//         if (item === itemToRemuve) {
 
-            let idx = des.indexOf(item)
+//             let idx = des.indexOf(item)
 
-            des.splice(idx, 1)
+//             des.splice(idx, 1)
+//         }
+//     }
+//     return des
+// }
+
+// console.log(remuveDate(des, "ebola"))
+
+// ================================================
+// find small
+
+let nums = [10, 23, 3, 34, 5, 6, -2, 9, 98]
+function getSmallest(numsArr) {
+    let min = numsArr[0]
+
+    for (let i = 0; i < numsArr.length; i++) {
+        if (numsArr[i] < min) {
+            min = numsArr[i]
+
         }
     }
-    return des
+    return min;
 }
-
-console.log(remuveDate(des, "ebola"))
+console.log(getSmallest(nums))
