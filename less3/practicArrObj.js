@@ -109,10 +109,33 @@
 // };
 
 // const values = Object.values(goods)
-// // console.log(values)
-// let total = 0
+
+// let total = 0;
+
 // for (const value of values) {
 //     total += value
 // }
+
 // console.log(total)
 
+const books = [
+    {
+        title: "The Last Kingdom",
+        author: "Bernard Cornwell",
+        rating: 8.38,
+    },
+    {
+        title: "На березі спокійних вод",
+        author: "Роберт Шеклі",
+        rating: 8.51,
+    },
+    {
+        title: "Сон смішної людини",
+        author: "Федір Достоєвський",
+        rating: 7.75,
+    },
+];
+
+for (let book of books) {
+    console.log(book.title)
+}
