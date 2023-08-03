@@ -118,24 +118,124 @@
 
 // console.log(total)
 
-const books = [
-    {
-        title: "The Last Kingdom",
-        author: "Bernard Cornwell",
-        rating: 8.38,
-    },
-    {
-        title: "На березі спокійних вод",
-        author: "Роберт Шеклі",
-        rating: 8.51,
-    },
-    {
-        title: "Сон смішної людини",
-        author: "Федір Достоєвський",
-        rating: 7.75,
-    },
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "На березі спокійних вод",
+//         author: "Роберт Шеклі",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "Сон смішної людини",
+//         author: "Федір Достоєвський",
+//         rating: 7.75,
+//     },
+// ];
+
+// for (let book of books) {
+//     console.log(book.title)
+// }
+
+// =================================================
+const friends = [
+    { name: 'Mango', online: true },
+    { name: 'Bob', online: true },
+    { name: 'Marty', online: false },
+    { name: 'Rayan', online: true },
 ];
 
-for (let book of books) {
-    console.log(book.title)
+console.table(friends)
+// Шкажмо друга по імені
+const flindFriandByName = function (allFriends, friendName) {
+    for (const friend of allFriends) {
+        // console.log(friend)
+        if (friend.name === friendName) {
+            return 'Знайшли!!!'
+        }
+    }
+    return 'Не знайшли!!!'
 }
+// console.log(flindFriandByName(friends, 'Bob'))
+// console.log(flindFriandByName(friends, 'Kany'))
+
+// Отримуємо імена всіх друзів
+const getAllNames = function (allFriends) {
+
+    const names = [];
+
+    for (const friend of allFriends) {
+        // console.log(friend.name)
+        names.push(friend.name)
+    }
+
+    return names;
+}
+
+// console.log(getAllNames(friends))
+
+// Отримуємо значення друзів які онлайн
+const getOnlineFriends = function (allFriends) {
+    const friendsOnline = [];
+
+    for (const friend of allFriends) {
+        console.log(friend)
+        console.log(friend.online)
+
+        if (friend.online) {
+            friendsOnline.push(friend)
+        }
+    }
+    return friendsOnline;
+}
+
+// console.log(getOnlineFriends(friends))
+
+// Отримуємо значення друзів які не онлайн
+const getOffLineFriends = function (allFriends) {
+    const offLineFriens = [];
+
+    for (const friend of allFriends) {
+        console.log(friend.online)
+        if (!friend.online) {
+            offLineFriens.push(friend)
+        }
+    }
+    return offLineFriens;
+}
+
+// console.log(getOffLineFriends(friends))
+
+const getFriehdsByOnlineStutus = function (allFriends) {
+    const friendsByStutus = {
+        online: [],
+        offline: []
+    }
+
+    for (const friend of allFriends) {
+
+        if (friend.online) {
+            friendsByStutus.online.push(friend)
+            continue;
+        }
+        friendsByStutus.offline.push(friend)
+        // const key = friend.online ? 'online' : 'offline';
+        // friendsByStutus[key].push(friend);
+    }
+    return friendsByStutus;
+};
+
+// console.log(getFriehdsByOnlineStutus(friends));
+
+
+// const x = {
+//     a: 1,
+//     b: 5,
+//     c: 34,
+//     d: 87
+// }
+
+// console.log(Object.keys(x).length)
