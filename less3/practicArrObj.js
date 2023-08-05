@@ -70,15 +70,15 @@
 //     author: "Bernard Cornwell",
 //     genres: ["historical prose", "adventure"],
 //     rating: 8.38,
-//   };
-//   const keys = Object.keys(book);
+// };
+// const keys = Object.keys(book);
 
-//   for (const key of keys) {
+// for (const key of keys) {
 //     // Ключ
 //     console.log(key);
 //     // Значення властивості
 //     console.log(book[key]);
-//   }
+// }
 
 // Ми перебираємо масив ключів об'єкта і на кожній ітерації отримуємо значення властивості
 // з таким ключем.

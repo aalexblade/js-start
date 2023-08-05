@@ -9,6 +9,7 @@
 // };
 
 // const accessType = book.isPublic ? "публічному" : "закритому";
+// console.log(accessType)
 // const message = `Книга ${book.title} автора ${book.author} з рейтингом ${book.rating} знаходиться в ${accessType} доступі.`;
 // console.log(message)
 
@@ -87,18 +88,18 @@
 // Перебираючи масив об'єктів циклом for...of, утворюються багаторазові
 // звернення до властивостей об'єкта.
 
-const books = [
-    {
-        title: "The Last Kingdom",
-        author: "Bernard Cornwell",
-        rating: 8.38,
-    },
-    {
-        title: "На березі спокійних вод",
-        author: "Роберт Шеклі",
-        rating: 8.51,
-    },
-];
+// const books = [
+//     {
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "На березі спокійних вод",
+//         author: "Роберт Шеклі",
+//         rating: 8.51,
+//     },
+// ];
 
 // for (const book of books) {
 //     console.log(book.title);
@@ -144,7 +145,7 @@ const books = [
 // const {
 //     name,
 //     tag,
-//     stats: { followers, views: userViews, likes: userLikes = 0 },
+//     stats: { followers, views: userViews = 777, likes: userLikes = 0 },
 // } = user;
 
 // console.log(name); // Jacques Gluke
@@ -152,3 +153,57 @@ const books = [
 // console.log(followers); // 5603
 // console.log(userViews); // 4827
 // console.log(userLikes); // 1308
+
+// ===================================================
+// const rgb = [255, 100, 80];
+// const [red, green, blue] = rgb
+// console.log(red, green, blue)
+
+// ===================================================
+// const authors = {
+//     kiwi: 7,
+//     poly: 9,
+//     ajax: 4,
+//     mango: 8
+// };
+
+// const entries = Object.entries(authors)
+
+// for (const [name, rating] of entries) {
+//     // const [name, rating] = entry
+
+//     // const name = entry[0]
+//     // const rating = entry[1]
+
+//     console.log(name, rating)
+
+// }
+
+// =====================================================
+// object params
+
+const showProfileInfo = function (userProfile) {
+    const {
+        name,
+        tag,
+        location,
+        avatar,
+        ...restProps
+    } = userProfile;
+    // console.log(name, tag, location, avatar, followers, views, likes)
+    console.log(restProps)
+};
+
+const profile = {
+    name: "Jacques Gluke",
+    tag: "jgluke",
+    location: "Ocho Rios, Jamaica",
+    avatar: "https://via.placeholder.com/640/480",
+    stats: {
+        followers: 5603,
+        views: 4827,
+        likes: 1308,
+    },
+};
+
+showProfileInfo(profile)

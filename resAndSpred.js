@@ -113,3 +113,34 @@
 // усіх аргументів, а тому повинна бути останньою у підписі функції, інакше виникне помилка.
 
 
+// ==========================================
+// const a = { x: 2, y: 5 }
+// const b = { x: 9, w: 5 }
+
+// const c = {
+//     ...a,
+//     x: 10,
+//     ...b,
+//     y: 7
+// }
+
+// console.log(c)
+// ==========================================
+
+const defaultSetting = {
+    them: 'light',
+    showNotifications: true,
+    hideSidebar: false,
+}
+
+const userSetting = {
+    showNotifications: false,
+    hideSidebar: true,
+}
+
+const finalSetting = {
+    ...defaultSetting,
+    ...userSetting,
+}
+
+console.log(finalSetting)
