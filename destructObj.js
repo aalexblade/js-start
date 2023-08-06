@@ -206,4 +206,52 @@ const profile = {
     },
 };
 
-showProfileInfo(profile)
+// showProfileInfo(profile)
+
+// =================================================
+// Shop колекція товарів в корзині
+
+const cart = {
+    items: [],
+    getItems() {
+        return this.items;
+    },
+    add(product) {
+        this.items.push(product)
+    },
+    remove(productName) {
+
+        const { items } = this;
+
+        for (let i = 0; i < items.length; i += 1) {
+
+            const { name } = this.items[i]
+
+            if (productName === name) {
+                console.log('знайшли такий продукт', productName)
+                console.log(i)
+
+                items.splice(i, 1)
+            }
+
+        }
+
+
+    },
+    clear() { },
+    countTotalPrice() { },
+    increaseQuantity(productName) { },
+    decreaseQuantity(productName) { },
+
+};
+
+console.table(cart.getItems());
+
+cart.add({ name: 'tomato', price: 50 });
+cart.add({ name: 'potato', price: 30 });
+cart.add({ name: 'apple', price: 70 });
+cart.add({ name: 'grape', price: 20 });
+
+console.table(cart.getItems());
+cart.remove('apple')
+console.table(cart.getItems());
