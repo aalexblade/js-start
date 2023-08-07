@@ -217,41 +217,97 @@ const cart = {
         return this.items;
     },
     add(product) {
-        this.items.push(product)
+
+        for (const item of this.items) {
+            if (item.name === product.name) {
+                item.quantity += 1
+                return;
+            }
+        }
+        const newProduct = {
+            ...product,
+            quantity: 1,
+        }
+        this.items.push(newProduct)
     },
     remove(productName) {
 
+        // ================================================
+        // деструкториація 
         const { items } = this;
-
         for (let i = 0; i < items.length; i += 1) {
+            console.log(items[i]);
 
-            const { name } = this.items[i]
-
+            const { name } = items[i];
             if (productName === name) {
-                console.log('знайшли такий продукт', productName)
-                console.log(i)
+                console.log('includes product', productName);
+                console.log('index', i);
 
-                items.splice(i, 1)
+                items.splice(i, 1);
             }
 
         }
+        // ======================================================
+        // без деструкторизації
+        // for (let i = 0; i < this.items.length; i += 1) {
+        //     console.log(this.items[i])
 
+        //     if (productName === this.items[i].name) {
+        //         console.log('знайшли такий продукт', productName)
+        //         console.log('index', i)
+
+        //         this.items.splice(i, 1)
+        //     }
+
+        // }
 
     },
-    clear() { },
-    countTotalPrice() { },
+    clear() {
+        this.items = []
+    },
+    countTotalPrice() {
+        // ====================================
+        // деструкториація 
+        const { items } = this
+        let total = 0
+
+        for (const { price, quantity } of items) {
+            total += price * quantity
+        }
+        return total
+        // ======================================================
+        // без деструкторизації
+        // console.log(this.items)
+        // let total = 0;
+
+        // for (const item of this.items) {
+        //     total += item.price
+        // }
+        // return total
+    },
     increaseQuantity(productName) { },
     decreaseQuantity(productName) { },
 
 };
 
-console.table(cart.getItems());
+console.log(cart.getItems());
 
 cart.add({ name: 'tomato', price: 50 });
 cart.add({ name: 'potato', price: 30 });
+cart.add({ name: 'potato', price: 30 });
+cart.add({ name: 'potato', price: 30 });
 cart.add({ name: 'apple', price: 70 });
+cart.add({ name: 'grape', price: 20 });
 cart.add({ name: 'grape', price: 20 });
 
 console.table(cart.getItems());
+
+console.log('Total:', cart.countTotalPrice())
+
 cart.remove('apple')
 console.table(cart.getItems());
+
+cart.clear()
+console.log(cart.getItems())
+
+console.log('Total:', cart.countTotalPrice())
