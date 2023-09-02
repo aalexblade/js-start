@@ -35,8 +35,12 @@ const students = [
     { name: "Х'юстон", score: 64 },
 ];
 
-const names = students.map(student => student.name);
-console.log(names); // ['Манго', 'Полі', 'Аякс', 'Ківі', 'Х'юстон']
+// const names = students.map(student => student.name);
+// console.log(names); // ['Манго', 'Полі', 'Аякс', 'Ківі', 'Х'юстон']
+
+// const name = students.map(({ name }) => name.toLowerCase())
+// console.log(name)
+
 
 // Використовуючи метод map(), ми можемо перебрати масив об'єктів, і в колбек-функції
 // повернути значення властивості кожного з них.
