@@ -49,11 +49,10 @@
 
 // const allCourses = students.flatMap(student => student.courses);
 // // ['математика', 'фізика', 'інформатика', 'математика', 'фізика', 'біологія'];
-
+// console.log(allCourses)
 // // Cтворитюємо новий масив, в якому будуть тільки унікальні предмети, тобто без повторень.
 // const uniqueCourses = allCourses.filter(
 //     (course, index, array) => array.indexOf(course) === index
-
 // );
 // console.log(uniqueCourses)
 
@@ -76,14 +75,14 @@ const students = [
     { name: "Х'юстон", score: 64 },
 ];
 
-const best = students.filter(student => student.score >= HIGH_SCORE);
-console.log(best); // Масив об'єктів з іменами Манго і Ківі
+// const best = students.filter(student => student.score >= HIGH_SCORE);
+// console.log(best); // Масив об'єктів з іменами Манго і Ківі
 
-const worst = students.filter(student => student.score < LOW_SCORE);
-console.log(worst); // Масив з одним об'єктом Аякс
+// const worst = students.filter(({ score }) => score < LOW_SCORE);
+// console.log(worst); // Масив з одним об'єктом Аякс
 
-// В колбек-функції зручно деструктуризувати властивості об'єкта
-const average = students.filter(
-    ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
-);
-console.log(average); // Масив об'єктів з іменами Полі і Х'юстон
+// // В колбек-функції зручно деструктуризувати властивості об'єкта
+// const average = students.filter(
+//     ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
+// );
+// console.log(average); // Масив об'єктів з іменами Полі і Х'юстон
