@@ -116,3 +116,47 @@
 // console.log(eachElementInThirdIsEven);
 // console.log(eachElementInThirdIsOdd);
 
+// ===============================================
+// reduce()
+
+// Ігровому сервісу необхідний функціонал підрахунку середнього часу, проведеного в іграх.
+// Доповни код таким чином, щоб у змінній totalPlayTime вийшло загальний ігровий час з
+// масиву playtimes.
+
+// const players = {
+//     mango: 1270,
+//     poly: 468,
+//     ajax: 710,
+//     kiwi: 244
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// console.log(playtimes)
+
+// const totalPlayTime = playtimes.reduce((total, players) => {
+//     return total + players
+// }, 0);
+// console.log(totalPlayTime) //[2692]
+
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(averagePlayTime) //[673]
+
+// ====================================================
+// Загальний час одного гравця
+
+// проведений в одній грі для кожного гравця, і отримати загальну суму цих
+// значень часу.Розрахувати час для кожного з гравців можна, розділивши його
+// час(властивість playtime) на кількість ігор(властивість gamesPlayed
+
+// const players = [
+//     { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//     { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//     { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//     { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+
+
+// const totalAveragePlaytimePerGame = players.reduce((total, { playtime, gamesPlayed }) => {
+//     return total + playtime / gamesPlayed
+// }, 0);
+
+// console.log(totalAveragePlaytimePerGame);
