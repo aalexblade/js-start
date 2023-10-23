@@ -48,31 +48,33 @@
 // padBoth(str) - отримує параметр str(рядок) і додає його на початок і в кінець значення
 // властивості value об'єкта, який викликає цей метод.
 
-class StringBuilder {
-    constructor(value) {
-        this.value = value
-    }
-    getValue() {
-        return this.value
-    }
-    padEnd(str) {
-        this.value += str
-    }
-    padStart(str) {
-        this.value = str + this.value
-    }
-    padBoth(str) {
-        this.padStart(str)
-        this.padEnd(str)
-        // this.value = str + this.value + str
-    }
-}
+// class StringBuilder {
+//     constructor(value) {
+//         this.value = value
+//     }
+//     getValue() {
+//         return this.value
+//     }
+//     padEnd(str) {
+//         this.value += str
+//     }
+//     padStart(str) {
+//         this.value = str + this.value
+//     }
+//     padBoth(str) {
+//         this.padStart(str)
+//         this.padEnd(str)
+//         // this.value = str + this.value + str
+//     }
+// }
 
-const builder = new StringBuilder(".");
-console.log(builder.getValue()); // "."
-builder.padStart("^");
-console.log(builder.getValue()); // "^."
-builder.padEnd("^");
-console.log(builder.getValue()); // "^.^"
-builder.padBoth("=");
-console.log(builder.getValue()); // "=^.^="
+// const builder = new StringBuilder(".");
+// console.log(builder.getValue()); // "."
+// builder.padStart("^");
+// console.log(builder.getValue()); // "^."
+// builder.padEnd("^");
+// console.log(builder.getValue()); // "^.^"
+// builder.padBoth("=");
+// console.log(builder.getValue()); // "=^.^="
+
+
