@@ -1,10 +1,13 @@
-const categoriesRef = document.querySelector('#categories')
-const itemsRef = document.querySelectorAll('.item')
+const liRef = document.querySelector("#categories");
+const itemRef = document.querySelectorAll(".item");
 
-// console.log(categoriesRef)
-console.log(itemsRef)
+console.log(`Number of categories: ${liRef.children.length}`);
 
-// const murkup = categoriesRef.forEach((categorie) => `Number of categories:${categorie}`)
-// // .join('')
+itemRef.forEach(elem => {
+    const categoryNameRef = elem.querySelector("h2").textContent;
+    const categoryItemRef = elem.querySelectorAll("li").length;
 
-// console.log(murkup)
+    console.log("Category:", categoryNameRef)
+    console.log("Elements:", categoryItemRef)
+
+})
