@@ -1,30 +1,67 @@
 
-const btnDecrementRef = document.querySelector('button[data-action = "decrement"]')
-const btnIncrementRef = document.querySelector('button[data-action = "increment"]')
-const btnRestRef = document.querySelector('button[data-action = "rest"]')
+// const btnDecrementRef = document.querySelector('[data-action = "decrement"]')
+// const btnIncrementRef = document.querySelector('[data-action = "increment"]')
+// const btnResetRef = document.querySelector('[data-action = "reset"]')
+// const valueRef = document.getElementById('value')
+
+// let counterValue = 0
+// // =================================================
+// btnDecrementRef.addEventListener('click', () => {
+//     counterValue -= 1
+//     valueRef.textContent = counterValue
+// })
+
+// btnIncrementRef.addEventListener('click', () => {
+//     counterValue += 1
+//     valueRef.textContent = counterValue
+// })
+
+// btnResetRef.addEventListener('click', () => {
+//     counterValue = 0
+//     valueRef.innerHTML = '0'
+// })
+
+// // ====================================================
+
+const decRef = document.querySelector('[data-action="decrement"]')
+const incRef = document.querySelector('[data-action="increment"]')
+const restRef = document.querySelector('[data-action="reset"]')
 const valueRef = document.getElementById('value')
 
 let counterValue = 0
-// =================================================
-btnDecrementRef.addEventListener('click', () => {
+
+decRef.addEventListener('click', () => {
     counterValue -= 1
     valueRef.textContent = counterValue
+
 })
 
-btnIncrementRef.addEventListener('click', () => {
+incRef.addEventListener('click', () => {
     counterValue += 1
     valueRef.textContent = counterValue
+
 })
 
-btnRestRef.addEventListener('click', () => {
-    counterValue = 0
+restRef.addEventListener('click', () => {
     valueRef.innerHTML = '0'
 })
 
-// ====================================================
+// ==========================================
 
-// btnRestRef.addEventListener('click', rest)
-// function rest(event) {
-//     counterValue = 0
+// decRef.addEventListener('click', decrement)
+// incRef.addEventListener('click', incremnt)
+// restRef.addEventListener('click', reset)
+
+// function decrement() {
+//     counterValue -= 1
+//     valueRef.textContent = counterValue
+// }
+
+// function incremnt() {
+//     counterValue += 1
+//     valueRef.textContent = counterValue
+// }
+
+// function reset() {
 //     valueRef.innerHTML = '0'
 // }
