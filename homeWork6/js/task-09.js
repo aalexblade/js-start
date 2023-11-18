@@ -1,12 +1,12 @@
 
 const bodyChangeColor = document.querySelector('body')
-const bodyRef = document.querySelector('.color')
+const spanColor = document.querySelector('.color')
 
 bodyChangeColor.addEventListener('click', onChangeColor)
 
 function onChangeColor(event) {
   bodyChangeColor.style.backgroundColor = getRandomHexColor()
-  bodyRef.textContent = bodyChangeColor.style.backgroundColor
+  spanColor.textContent = bodyChangeColor.style.backgroundColor
 }
 
 function getRandomHexColor() {
