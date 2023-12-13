@@ -88,3 +88,32 @@
 // console.log('This message will not appear in the console');
 
 // con value = 5;
+
+// =====================================================
+// Practics
+
+// const user = {
+//     username: 'Bogdan',
+//     carOwner: 'true',
+//     age: 25
+// }
+
+// console.log(user)
+
+// const userJson = JSON.stringify(user)
+// console.log(userJson)
+// console.log(typeof userJson)
+
+// // localStorage
+// localStorage.setItem('user', userJson)
+// // SessionStorage
+
+// const clickEl = document.querySelector('.click')
+// clickEl.addEventListener('click', () => {
+//     sessionStorage.setItem('user', userJson)
+// })
+
+// const userFromBD = JSON.parse(userJson)
+// console.log('User fom BD ->', userFromBD)
+
+// const clickEl = document.querySelector('.click')

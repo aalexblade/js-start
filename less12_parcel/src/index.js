@@ -1,11 +1,5 @@
-let getEl = selector => document.querySelector(selector)
-getEl('button').addEventListener('clicl', createNewCar)
+import { multiply } from "./export"
 
-let carArrayBrand = ['BMW', 'Mesedes', 'Renaut']
-let carModalBrand = ['m5', 's Class', 'Megane']
-
-function newCar() {
-    return {
-
-    }
-}
+console.log(multiply(2, 1)); //  6
+console.log(multiply(1, 2, 3, 4)); //  24
+console.log(multiply(1, 2, 3, 4, 5)); //  120
