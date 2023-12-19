@@ -1,13 +1,12 @@
-function multiply() {
-    let total = 1;
+// function add(a, b) {
+//     return a + b
+// }
 
-    for (const argument of arguments) {
-        console.log(argument)
-        total += argument;
-        ``
-    }
+// function sum(a, b) {
+//     return a * b
+// }
 
-    return total;
-}
+// const a = 200
 
-export { multiply }
+// export { add, sum }
+// export default a
