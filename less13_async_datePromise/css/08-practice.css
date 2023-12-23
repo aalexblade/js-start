@@ -1,0 +1,7 @@
+.box {
+  display: none;
+  width: 250px;
+  height: auto;
+  border: 1px black solid;
+  cursor: pointer;
+}
