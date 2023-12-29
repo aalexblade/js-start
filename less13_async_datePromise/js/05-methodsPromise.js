@@ -79,25 +79,55 @@
 // побудувати ланцюжок промісів і вже є початкове значення.Виконаємо
 // рефакторинг наступного коду.
 
+// const makeGreeting = guestName => {
+//     if (guestName === '' || guestName === undefined) {
+//         return {
+//             success: false,
+//             message: "Guest name must not be empty",
+//         }
+//     }
+//     return {
+//         success: true,
+//         message: `Welcome ${guestName}`
+//     }
+// }
+
+// const result = makeGreeting('Mango')
+
+// if (result.success) {
+//     console.log(result.message)
+// }
+// else {
+//     console.error(result.message)
+
+// }
+
+// Використовуючи колбек, відпадає необхідність повертати складні об'єкти
+// зі статусом операції і перевіряти його у зовнішньому коді.
+
+// const makeGreeting = (guestName, onSuccess, onError) => {
+//     if (guestName === "" || guestName === undefined) {
+//         return onError("Guest name must not be empty");
+//     }
+//     onSuccess(`Welcome ${guestName}`);
+// };
+
+// makeGreeting(
+//     "Mango",
+//     greeting => console.log(greeting),
+//     error => console.error(error)
+// );
+
+// Останнім кроком буде промісифікація функції makeGreeting() для того,
+// щоб повністю усунути її залежність від зовнішнього коду.
+
 const makeGreeting = guestName => {
     if (guestName === '' || guestName === undefined) {
-        return {
-            success: false,
-            message: "Guest name must not be empty",
-        }
+        return Promise.reject('Guest name must not be empty')
     }
-    return {
-        success: true,
-        message: `Welcome ${guestName}`
-    }
+    return Promise.resolve(`Welcome guest${guestName}`)
 }
 
-const result = makeGreeting('Mango')
-
-if (result.success) {
-    console.log(result.message)
-}
-else {
-    console.error(result.message)
-
-}
+makeGreeting('')
+    .then(greeting => console.log(greeting))
+    .catch(error => console.error(error))
