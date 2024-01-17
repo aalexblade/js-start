@@ -1,0 +1,70 @@
+body {
+  margin: 16px;
+  line-height: 1.5;
+  color: #212121;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.user-list {
+  margin: 0;
+  list-style: none;
+  padding: 24px;
+}
+
+.user-list li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+/* btn,
+.btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+} */
+
+.btn,
+.btn-large,
+.btn-floating,
+.btn-large,
+.btn-flat {
+  font-size: 1rem;
+  outline: 0;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.btn,
+.btn-large,
+.btn-flat {
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* .btn,
+.btn-large,
+.btn-floating,
+.btn-large,
+.btn-flat {
+  font-size: 1rem;
+  outline: 0;
+} */
